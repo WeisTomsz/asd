@@ -7,11 +7,11 @@
  *   - 5. bit = 1
  */
 
-void feltolt(int tomb[], int meret) {
-  int darab = 0;
+void feltolt(int tomb1[], int meret) {
+  int i = 0;
   int szam = 1008;
 
-  while (darab < meret) {
+  while (i < meret) {
     /*
      * Bitmaszkok:
      *   2. bit:  1 << 2 = 0b000100 = 4
@@ -24,8 +24,8 @@ void feltolt(int tomb[], int meret) {
      *   (szam & 32) != 0  --> 5. bit egy
      */
     if ((szam & 4) == 0 && (szam & 8) == 0 && (szam & 32) != 0) {
-      tomb[darab] = szam;
-      darab++;
+      tomb1[i] = szam;
+      i++;
     }
     szam++;
   }
