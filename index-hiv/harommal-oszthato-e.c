@@ -2,9 +2,9 @@
 
 void feltolt(int tomb[], int meret) {
   int szam = 1020;
-  int db = 0;
+  int i = 0;
 
-  while (db < meret) {
+  while (i < meret) {
     /* Ellenorzom, hogy osztható-e 3-mal */
     int osztható = (szam % 3 == 0);
 
@@ -14,8 +14,8 @@ void feltolt(int tomb[], int meret) {
     int van_kettes = (tizes == 2);
 
     if (osztható && van_kettes) {
-      tomb[db] = szam;
-      db++;
+      tomb[i] = szam;
+      i++;
     }
 
     szam++;
